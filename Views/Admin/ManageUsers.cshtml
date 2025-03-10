@@ -1,0 +1,65 @@
+@model IEnumerable<TravelApp.Models.User>
+@using System.Security.Claims
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var currentUserIdString = User.FindFirstValue(ClaimTypes.NameIdentifier);
+    int? currentUserId = string.IsNullOrEmpty(currentUserIdString) ? null : int.Parse(currentUserIdString);
+}
+
+<h2 class="page-title">Zarządzanie użytkownikami</h2>
+
+<div class="table-container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nazwa użytkownika</th>
+                <th>Email</th>
+                <th>Rola</th>
+                <th>Akcje</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in Model)
+            {
+                <tr>
+                    <td>@user.UserId</td>
+                    <td>
+                        @if (currentUserId.HasValue && currentUserId.Value == user.UserId)
+                        {
+                            <a asp-action="Profile" asp-controller="Account" class="user-profile-link">
+                                @user.Username
+                            </a>
+                        }
+                        else
+                        {
+                            <a asp-action="UserProfile" asp-controller="Account" asp-route-userId="@user.UserId" class="user-profile-link">
+                                @user.Username
+                            </a>
+                        }
+                    </td>
+                    <td>@user.Email</td>
+                    <td>
+                        <form method="post" asp-action="UpdateUserRole" asp-controller="Admin">
+                            <input type="hidden" name="id" value="@user.UserId" />
+                            <select name="role" class="form-control" onchange="this.form.submit()">
+                                <option value="User" selected="@(user.Role == "User" ? "selected" : null)">User</option>
+                                <option value="Moderator" selected="@(user.Role == "Moderator" ? "selected" : null)">Moderator</option>
+                                <option value="Admin" selected="@(user.Role == "Admin" ? "selected" : null)">Admin</option>
+                            </select>
+                        </form>
+                    </td>
+                    <td>
+                        <form method="post" asp-action="DeleteUser" asp-controller="Admin" onsubmit="return confirm('Czy na pewno chcesz usunąć użytkownika?');">
+                            <input type="hidden" name="id" value="@user.UserId" />
+                            <button type="submit" class="btn btn-danger">Usuń</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<link rel="stylesheet" href="~/css/admin.css">

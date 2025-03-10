@@ -1,0 +1,76 @@
+@model TravelApp.Models.Article
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Edytuj artykuł";
+}
+
+<h1>Edytuj poradnik</h1>
+
+<form method="post" asp-action="EditArticle" asp-route-articleId="@Model.ArticleId" enctype="multipart/form-data">
+    @Html.AntiForgeryToken()
+    
+    <div class="form-group">
+        <label for="Title">Tytuł</label>
+        <input type="text" class="form-control" id="Title" name="Title" value="@Model.Title" required />
+    </div>
+    <div class="form-group">
+        <label for="Description">Opis</label>
+        <textarea class="form-control" id="Description" name="Description" rows="5" required>@Model.Description</textarea>
+    </div>
+
+    <div class="form-group">
+        <label>Istniejące zdjęcia</label>
+        @if (Model.Images != null && Model.Images.Any())
+        {
+            <div class="existing-images">
+                @foreach (var image in Model.Images)
+                {
+                    <div class="image-container">
+                        <img src="@image.ImagePath" alt="Zdjęcie" class="img-thumbnail existing-image" />
+                        <button type="button" class="btn btn-danger btn-sm remove-image-btn" data-image-id="@image.Id">
+                            &times;
+                        </button>
+                    </div>
+                }
+            </div>
+        }
+        else
+        {
+            <p>Brak zdjęć do wyświetlenia.</p>
+        }
+    </div>
+
+    <div class="form-group">
+        <label for="images">Dodaj nowe zdjęcia (opcjonalne)</label>
+        <label class="custom-file-label">
+            <input type="file" name="images" id="images" class="custom-file-input" multiple />
+        </label>
+    </div>
+
+    <div class="form-group">
+        <label>Wybrane zdjęcia:</label>
+        <ul id="selected-files-list" class="list-unstyled">
+        </ul>
+    </div>
+
+    <div class="form-actions">
+        <button type="submit" class="btn btn-primary">Zapisz zmiany</button>
+        <a href="@Url.Action("ArticleDetails", new { id = Model.ArticleId })" class="btn btn-secondary">Odrzuć zmiany</a>
+        <button type="button" class="btn btn-danger" onclick="submitDeleteForm()">Usuń poradnik</button>
+    </div>
+
+</form>
+
+@if (User.IsInRole("Admin"))
+{
+    <form id="deleteForm" asp-action="DeleteArticle" asp-route-articleId="@Model.ArticleId" method="post" style="display: none;">
+        @Html.AntiForgeryToken()
+    </form>
+}
+
+
+<script src="~/js/uploadImages.js"></script>
+<script src="~/js/deleteArticleImages.js"></script>
+<script src="~/js/deleteStory.js"></script>
+<link rel="stylesheet" href="~/css/articleDetails.css">

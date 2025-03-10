@@ -1,0 +1,38 @@
+@{
+    ViewData["Title"] = "Rejestracja";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="auth-container">
+    <h2 class="auth-title">Rejestracja</h2>
+
+    <form method="post" asp-action="Register">
+        <div class="auth-input-group">
+            <label class="auth-label">Nazwa użytkownika:</label>
+            <input type="text" name="username" class="auth-input" required value="@ViewData["Username"]" />
+        </div>
+        <div class="auth-input-group">
+            <label class="auth-label">Email:</label>
+            <input type="email" name="email" class="auth-input" required value="@ViewData["Email"]"
+       pattern="^[a-zA-Z0-9._%+-]+@@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+       title="Podaj poprawny adres e-mail w formacie np. user@example.com" />
+        </div>
+        <div class="auth-input-group">
+            <label class="auth-label">Hasło:</label>
+            <input type="password" name="password" class="auth-input" required 
+                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$"
+                title="Hasło musi zawierać co najmniej 8 znaków, w tym jedną wielką literę, jedną małą literę, cyfrę i znak specjalny." />
+        </div>
+        <small class="text-muted">Hasło musi zawierać co najmniej 8 znaków, w tym jedną wielką literę, jedną małą literę, cyfrę i znak specjalny.</small>
+        <button type="submit" class="auth-button">Zarejestruj się</button>
+    </form>
+
+    @if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+    {
+        <p class="auth-error">@ViewBag.ErrorMessage</p>
+    }
+
+    <p class="auth-text">Masz już konto? <a asp-action="Login" class="auth-link">Zaloguj się</a></p>
+</div>
+
+<link rel="stylesheet" href="~/css/loginUser.css">

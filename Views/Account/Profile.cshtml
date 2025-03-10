@@ -1,0 +1,103 @@
+@model TravelApp.Models.User
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container profile-container">
+    <div class="row">
+        <div class="col-12 d-flex gap-2 d-md-none mb-3">
+            <a href="@Url.Action("Stories", "Home", new { userId = Model.UserId })" class="btn btn-primary text-white w-50">Moje relacje</a>
+            <button id="mobile-edit-profile-btn" class="btn btn-primary text-white w-50">Edytuj profil</button>
+        </div>
+        <div class="col-9 d-flex profile-header">
+            <div class="avatar-section">
+                <div class="avatar-container">
+                    @if (string.IsNullOrEmpty(Model.AvatarPath))
+                    {
+                        <img src="~/images/default-user-image.jpg" alt="Default Avatar" class="img-fluid" />
+                    }
+                    else
+                    {
+                        <img src="~/uploads/@Model.AvatarPath" alt="Avatar" class="img-fluid" />
+                    }
+                </div>
+            </div>
+            <div class="user-info d-flex flex-column justify-content-center" style="margin-top: 50px; flex: 1;">
+                <div class="username">@Model.Username</div>
+
+                <div class="user-stats">
+                    <span class="stat">
+                        <a href="@Url.Action("Followers", "Account", new { userId = Model.UserId })">
+                            Obserwujący: @ViewData["FollowersCount"]
+                        </a>
+                    </span>
+                    
+                    <span class="stat">
+                        <a href="@Url.Action("Following", "Account", new { userId = Model.UserId })">
+                            Obserwowani: @ViewData["FollowingCount"]
+                        </a>
+                    </span>
+                </div>
+            </div>
+        </div>
+         <div class="col-md-3 edit-menu d-none d-md-block">
+            <div class="menu-box">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary text-white fw-bold mt-2" href="@Url.Action("Stories", "Home", new { userId = Model.UserId })">
+                            Moje relacje
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="edit-profile-btn" class="nav-link btn btn-primary text-white fw-bold mt-2" href="#">
+                            Edytuj profil
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <h4 class="bio-header">O mnie:</h4>
+            <div id="bio-display" class="bio-content">
+                @if (string.IsNullOrEmpty(Model.Bio))
+                {
+                    <p class="text-muted">Nie dodano jeszcze opisu.</p>
+                }
+                else
+                {
+                    <p>@Model.Bio</p>
+                }
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div id="edit-profile-section" class="col-12">
+            <h4>Edytuj profil</h4>
+            <form asp-action="UpdateProfile" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="avatar">Zmień awatar:</label>
+                    <input type="file" name="avatar" id="avatar" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="username">Nazwa użytkownika:</label>
+                    <input type="text" name="username" id="username" class="form-control" value="@Model.Username" />
+                </div>
+                <div class="form-group">
+                    <label for="bio">O mnie (bio):</label>
+                    <textarea name="bio" id="bio" class="form-control" maxlength="2000" rows="5" placeholder="Napisz coś o sobie...">@Model.Bio</textarea>
+                    <small class="form-text text-muted">Maksymalnie 2000 znaków.</small>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Zapisz zmiany</button>
+                    <button type="button" id="cancel-edit-btn" class="btn btn-secondary">Anuluj</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/editProfile.js"></script>
+<link rel="stylesheet" href="~/css/profileView.css">

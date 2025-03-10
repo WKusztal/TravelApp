@@ -1,0 +1,77 @@
+@model List<TravelApp.Models.Report>
+
+@using System.Security.Claims
+
+@{
+    var currentUserIdString = User.FindFirstValue(ClaimTypes.NameIdentifier);
+    int? currentUserId = string.IsNullOrEmpty(currentUserIdString) ? null : int.Parse(currentUserIdString);
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="page-title">Zgłoszenia użytkowników</h2>
+
+@if (Model.Any())
+{
+    <div class="report-table-container">
+        <table class="report-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Użytkownik</th>
+                    <th>Powód zgłoszenia</th>
+                    <th>Relacja</th>
+                    <th>Data</th>
+                    <th>Akcje</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var report in Model)
+                {
+                    <tr>
+                        <td>@report.Id</td>
+                        <td>
+                            @if (report.User != null && currentUserId.HasValue && report.User.UserId == currentUserId.Value)
+                            {
+                                <a asp-action="Profile" asp-controller="Account" class="report-user">
+                                    @(string.IsNullOrEmpty(report.User?.Username) 
+                                        ? "Nieznany użytkownik" 
+                                        : (report.User.Username.Length > 15 
+                                            ? report.User.Username.Substring(0, 15) + "..." 
+                                            : report.User.Username))
+                                </a>
+                            }
+                            else if (report.User != null)
+                            {
+                                <a asp-action="UserProfile" asp-controller="Account" asp-route-userId="@report.User?.UserId" class="report-user">
+                                    @(string.IsNullOrEmpty(report.User?.Username) 
+                                        ? "Nieznany użytkownik" 
+                                        : (report.User.Username.Length > 15 
+                                            ? report.User.Username.Substring(0, 15) + "..." 
+                                            : report.User.Username))
+                                </a>
+                            }
+                            else
+                            {
+                                <span class="report-user-placeholder">Nieznany użytkownik</span>
+                            }
+                        </td>
+                        <td>@report.Reason</td>
+                        <td>
+                            <a href="@Url.Action("StoryDetails", "Home", new { id = report.StoryId })" target="_blank" class="btn btn-link">Przejdź do relacji</a>
+                        </td>
+                        <td>@report.CreatedAt.AddHours(1).ToString("dd-MM-yyyy HH:mm")</td>
+                        <td>
+                            <a href="@Url.Action("DeleteReport", "Admin", new { id = report.Id })" class="btn btn-danger btn-sm">Usuń</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+else
+{
+    <p>Brak zgłoszeń.</p>
+}
+
+<link rel="stylesheet" href="~/css/admin.css">

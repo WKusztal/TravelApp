@@ -1,0 +1,72 @@
+@model TravelApp.Models.Article
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = Model.Title;
+}
+
+<div class="container article-details">
+    <div class="article-header">
+        <div class="article-meta">
+            @if (User.IsInRole("Admin"))
+            {
+                <a href="@Url.Action("EditArticle", "Article", new { id = Model.ArticleId })" class="edit-article-btn">Edytuj poradnik</a>
+            }
+            <span class="article-date">@Model.CreatedAt.ToString("dd.MM.yyyy HH:mm")</span>
+        </div>
+        <h1 class="article-details-title">@Model.Title</h1>
+    </div>
+
+    <div class="article-photo-collage">
+        @if (Model.Images != null && Model.Images.Any())
+        {
+            <div class="article-photo-grid">
+                @for (int i = 0; i < Math.Min(3, Model.Images.Count); i++)
+                {
+                    <div class="article-photo">
+                        <img src="@Model.Images.ElementAt(i).ImagePath" alt="Zdjęcie" data-index="@i"/>
+                    </div>
+                }
+
+                @if (Model.Images.Count > 4)
+                {
+                    <div class="article-photo article-more-photos">
+                        <img src="@Model.Images.ElementAt(3).ImagePath" alt="Zdjęcie" data-index="3"/>
+                        <div class="overlay">+@(Model.Images.Count - 3)</div>
+                    </div>
+                }
+                else if (Model.Images.Count == 4)
+                {
+                    <div class="article-photo">
+                        <img src="@Model.Images.ElementAt(3).ImagePath" alt="Zdjęcie" data-index="3"/>
+                    </div>
+                }
+
+                @for (int i = 4; i < Model.Images.Count; i++)
+                {
+                    <img src="@Model.Images.ElementAt(i).ImagePath" alt="Zdjęcie" class="hidden-photo" data-index="@i"/>
+                }
+            </div>
+        }
+        else
+        {
+            <p>Brak zdjęć do wyświetlenia.</p>
+        }
+    </div>
+
+    <p class="article-details-description mt-4">@Html.Raw(Model.Description.Replace("\n", "<br>"))</p>
+</div>
+
+<div id="lightbox" class="hidden">
+    <button id="lightbox-prev" class="lightbox-arrow">❮</button>
+    <div class="lightbox-content">
+        <button class="lightbox-close" id="lightbox-close">×</button>
+        <img id="lightbox-img" src="" alt="Zdjęcie" />
+    </div>
+    <button id="lightbox-next" class="lightbox-arrow">❯</button>
+</div>
+
+<script src="~/js/articleCollage.js"></script>
+<link rel="stylesheet" href="~/css/articleDetails.css">
+<link rel="stylesheet" href="~/css/articles.css">
+<link rel="stylesheet" href="~/css/articleCollage.css">

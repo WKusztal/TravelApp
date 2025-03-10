@@ -1,0 +1,29 @@
+@{
+    ViewData["Title"] = "Logowanie";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="auth-container">
+    <h2 class="auth-title">Logowanie</h2>
+
+    <form method="post" asp-action="Login">
+        <div class="auth-input-group">
+            <label class="auth-label">E-mail:</label>
+            <input type="email" name="email" class="auth-input" required />
+        </div>
+        <div class="auth-input-group">
+            <label class="auth-label">Hasło:</label>
+            <input type="password" name="password" class="auth-input" required />
+        </div>
+        <button type="submit" class="auth-button">Zaloguj</button>
+    </form>
+
+    @if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+    {
+        <p class="auth-error">@ViewBag.ErrorMessage</p>
+    }
+
+    <p class="auth-text">Nie masz konta? <a asp-controller="Account" asp-action="Register" class="auth-link">Zarejestruj się</a></p>
+</div>
+
+<link rel="stylesheet" href="~/css/loginUser.css">

@@ -1,0 +1,52 @@
+@model IEnumerable<TravelApp.Models.Article>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Artykuły";
+}
+
+<section class="container text-center my-5 contact-section">
+    <h1 class="contact-header">Poradniki</h1>
+
+    <p class="lead">
+        Odkrywaj eksperckie porady, inspirujące przewodniki i najnowsze informacje ze świata podróży.
+    </p>
+
+    @if (User.IsInRole("Admin"))
+    {
+        <div class="flex items-center gap-4 mb-4">
+            <a asp-action="AddArticle" class="btn btn-primary">Dodaj poradnik</a>
+        </div>
+    }
+
+    <hr class="section-divider">
+</section>
+
+<div class="article-list">
+    @foreach (var article in Model)
+    {
+        <div class="article-item-wrapper">
+            <a asp-action="ArticleDetails" asp-route-id="@article.ArticleId" class="article-item text-decoration-none">
+                @if (article.Images != null && article.Images.Any())
+                {
+                    <img src="@article.Images.First().ImagePath" alt="Zdjęcie artykułu" class="article-image" />
+                }
+                else
+                {
+                    <img src="~/uploads/default-article-image.png" alt="Zdjęcie artykułu" class="article-image" />
+                }
+                <div class="article-content">
+                    <div class="title-and-date d-flex justify-content-between align-items-start">
+                        <h2 class="article-title">@article.Title</h2>
+                        <span class="article-date">@article.CreatedAt.ToString("dd.MM.yyyy HH:mm")</span>
+                    </div>
+                    <p class="article-description">
+                        @article.Description?.Substring(0, Math.Min(article.Description.Length, 150))...
+                    </p>
+                </div>
+            </a>
+        </div>
+    }
+</div>
+
+<link rel="stylesheet" href="~/css/articles.css">

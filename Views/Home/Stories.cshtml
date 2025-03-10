@@ -1,0 +1,155 @@
+@model IEnumerable<TravelApp.Models.Story>
+@using System.Linq;
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Relacje";
+    var filterValue = ViewData["FilterValue"] as string ?? string.Empty;
+    var showFilters = !string.IsNullOrEmpty(filterValue);
+}
+
+<section class="container text-center my-5 contact-section">
+    <h1 class="contact-header">Relacje</h1>
+
+    <p class="lead"> 
+        Opowiadaj o wyjątkowych miejscach, 
+        inspiruj innych i odkrywaj świat oczami podróżników.
+    </p>
+
+    <a class="btn btn-primary" asp-action="AddStory">Dodaj relację</a>
+
+    <hr class="section-divider">
+</section>
+
+<div class="flex items-center gap-4 mb-4">
+    <div class="relative">
+        <button class="btn btn-secondary dropdown-filters-toggle" type="button" id="filterDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            Widok relacji <i class="bi bi-chevron-down"></i>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="filterDropdown">
+            <li><a class="dropdown-item filter-option" href="?filterValue=all">Wszystkie (domyślnie)</a></li>
+            <li><a class="dropdown-item filter-option" href="?filterValue=followingstories">Tylko obserwowanych</a></li>
+        </ul>
+    </div>
+    <div class="relative">
+        <button class="btn btn-secondary dropdown-filters-toggle" type="button" id="sortDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            Sortuj
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="sortDropdown">
+            <li><a class="dropdown-item sort-option" href="?sortBy=newest">Od najnowszych (domyślnie)</a></li>
+            <li><a class="dropdown-item sort-option" href="?sortBy=oldest">Od najstarszych</a></li>
+            <li><a class="dropdown-item sort-option" href="?sortBy=best">Najwyżej oceniane</a></li>
+            <li><a class="dropdown-item sort-option" href="?sortBy=worst">Najniżej oceniane</a></li>
+        </ul>
+    </div>
+    <a asp-action="Stories" class="clear btn btn-secondary whitespace-nowrap ms-auto">Resetuj</a>
+</div>
+
+<hr />
+
+<div id="filtersSection">
+    <form asp-action="Stories" method="get" class="flex items-center space-x-2">
+        <label for="tag">Wyszukaj według tagu:</label>
+        <input 
+            type="text" 
+            id="tag" 
+            name="tag" 
+            value="@ViewData["SelectedTag"]" 
+            class="form-control" 
+            placeholder="Wpisz tag" 
+        />  
+        <button type="submit" class="btn btn-primary">Zastosuj</button>
+    </form>
+</div>
+
+<hr />
+
+<form id="csrf-form">
+    @Html.AntiForgeryToken()
+</form>
+
+<div class="story-list">
+    @foreach (var story in Model)
+    {
+        <div class="story-item text-decoration-none">
+            <div class="story-item-wrapper">
+                <a asp-action="StoryDetails" asp-route-id="@story.StoryId" >
+                    @if (story.Images != null && story.Images.Any())
+                    {
+                        <img src="@story.Images.First().ImagePath" alt="Zdjęcie relacji" class="story-image" />
+                    }
+                    else
+                    {
+                        <img src="~/images/default-story-image.jpg" alt="Zdjęcie relacji" class="story-image" />
+                    }
+                    <div class="story-content">
+                        <div class="title-and-date d-flex justify-content-between align-items-start">
+                            <h2 class="story-title">@story.Title</h2>
+                            <span class="story-date">@story.CreatedAt.ToString("dd.MM.yyyy HH:mm")</span>
+                        </div>
+                        <p class="story-description">
+                            @story.Description?.Substring(0, Math.Min(story.Description.Length, 150))...
+                        </p>
+                    </div>
+                </a>
+            </div>
+                @{
+                    var currentUserId = ViewData["CurrentUserId"] as int?;
+                }
+
+                <div class="footer-container" data-view="stories">
+                    <div class="story-likes-container">
+                        <button class="btn-story-like" data-story-id="@story.StoryId">
+                            👍 <span id="likes-count-@story.StoryId">@story.Likes</span>
+                        </button>
+                        <button class="btn-story-dislike" data-story-id="@story.StoryId">
+                            👎 <span id="dislikes-count-@story.StoryId">@story.Dislikes</span>
+                        </button>
+                    </div>
+
+                    <div class="story-author-container">
+                        @if (story.Author != null && currentUserId.HasValue && story.Author.UserId == currentUserId.Value)
+                        {
+                            <a asp-action="Profile" asp-controller="Account" class="story-author">
+                                <img src="@(string.IsNullOrEmpty(story.Author.AvatarPath) ? Url.Content("~/images/default-user-image.jpg") : Url.Content("~/uploads/" + story.Author.AvatarPath))"
+                                    alt="Avatar" class="author-avatar" />
+                                <span class="author-name">
+                                    @(string.IsNullOrEmpty(story.Author.Username) 
+                                        ? "Nieznany użytkownik" 
+                                        : (story.Author.Username.Length > 15 
+                                            ? story.Author.Username.Substring(0, 15) + "..." 
+                                            : story.Author.Username))
+                                </span>
+                            </a>
+                        }
+                        else if (story.Author != null)
+                        {
+                            <a asp-action="UserProfile" asp-controller="Account" asp-route-userId="@story.Author.UserId" class="story-author">
+                                <img src="@(string.IsNullOrEmpty(story.Author.AvatarPath) ? Url.Content("~/images/default-user-image.jpg") : Url.Content("~/uploads/" + story.Author.AvatarPath))"
+                                    alt="Avatar" class="author-avatar" />
+                                <span class="author-name">
+                                    @(string.IsNullOrEmpty(story.Author.Username) 
+                                        ? "Nieznany użytkownik" 
+                                        : (story.Author.Username.Length > 15 
+                                            ? story.Author.Username.Substring(0, 15) + "..." 
+                                            : story.Author.Username))
+                                </span>
+                            </a>
+                        }
+                        else
+                        {
+                            <div class="story-author-placeholder">
+                                <img src="~/uploads/default-avatar.png" alt="Avatar" class="author-avatar" />
+                                <span class="author-name">Nieznany użytkownik</span>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>        
+    }
+</div>
+
+<script src="~/js/likeStory.js"></script>
+<script src="~/js/showFilters.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="~/css/stories.css">

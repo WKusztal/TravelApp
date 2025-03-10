@@ -1,0 +1,74 @@
+@model TravelApp.Models.Story
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Edytuj relację";
+}
+
+<h1>Edytuj relację</h1>
+
+<form method="post" asp-action="EditStory" asp-route-storyId="@Model.StoryId" enctype="multipart/form-data">
+    @Html.AntiForgeryToken()
+    <div class="form-group">
+        <label for="Title">Tytuł</label>
+        <input type="text" class="form-control" id="Title" name="Title" value="@Model.Title" required />
+    </div>
+    <div class="form-group">
+        <label for="Description">Opis</label>
+        <textarea class="form-control" id="Description" name="Description" rows="5" required>@Model.Description</textarea>
+    </div>
+    <div class="form-group">
+        <label>Istniejące zdjęcia</label>
+        @if (Model.Images != null && Model.Images.Any())
+        {
+            <div class="existing-images">
+                @foreach (var image in Model.Images)
+                {
+                    <div class="image-container">
+                        <img src="@image.ImagePath" alt="Zdjęcie" class="img-thumbnail existing-image" />
+                        <button type="button" class="btn btn-danger btn-sm remove-image-btn" data-image-id="@image.Id">
+                            &times;
+                        </button>
+                    </div>
+                }
+            </div>
+        }
+        else
+        {
+            <p>Brak zdjęć do wyświetlenia.</p>
+        }
+    </div>
+
+
+    <div class="form-group">
+        <label for="images">Dodaj nowe zdjęcia (opcjonalne)</label>
+        <label class="custom-file-label">
+            <input type="file" name="images" id="images" class="custom-file-input" multiple />
+        </label>
+    </div>
+    <div class="form-group">
+        <label>Wybrane zdjęcia:</label>
+        <ul id="selected-files-list" class="list-unstyled">
+        </ul>
+    </div>
+    <div class="form-group">
+        <label for="Tags">Tagi</label>
+        <input type="text" class="form-control" id="Tags" name="Tags" value="@string.Join(", ", Model.Tags.Select(t => t.Name))" placeholder="Wpisz tagi oddzielone przecinkami" />
+    </div>
+    <div class="d-flex justify-content-between mt-4">
+        <div>
+            <button type="submit" class="btn btn-success">Zapisz zmiany</button>
+            <a asp-action="Stories" class="btn btn-secondary">Odrzuć zmiany</a>
+        </div>
+        <button type="button" class="btn btn-danger" onclick="submitDeleteForm()">Usuń relację</button>
+    </div>
+</form>
+
+<form id="deleteForm" asp-action="DeleteStory" asp-route-storyId="@Model.StoryId" method="post" style="display: none;">
+    @Html.AntiForgeryToken()
+</form>
+
+<script src="~/js/uploadImages.js"></script>
+<script src="~/js/deleteImages.js"></script>
+<script src="~/js/deleteStory.js"></script>
+<link rel="stylesheet" href="~/css/storyDetails.css">

@@ -1,0 +1,43 @@
+@model TravelApp.Models.Story
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Dodaj relację";
+}
+
+<h1>Dodaj relację</h1>
+
+<form method="post" asp-action="AddStory" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="Title">Tytuł</label>
+        <input type="text" class="form-control" id="Title" name="Title" required />
+    </div>
+    <div class="form-group">
+        <label for="Description">Opis</label>
+        <textarea class="form-control" id="Description" name="Description" rows="5" required></textarea>
+    </div>
+    <div class="form-group">
+        <label for="images">Dodaj zdjęcia</label>
+        <label class="custom-file-label">
+            <input type="file" name="images" id="images" class="custom-file-input" multiple />
+        </label>
+    </div>
+    <div class="form-group">
+        <label>Wybrane zdjęcia:</label>
+        <ul id="selected-files-list" class="list-unstyled">
+        </ul>
+    </div>
+    <div class="form-group">
+        <label for="tags">Tagi (min. 3, max. 10)</label>
+        <input type="text" id="tags-input" class="form-control" placeholder="Dodaj tagi, oddzielając je przecinkami" />
+        <small class="form-text text-muted">Np. podróże, przygoda, Europa.</small>
+        <input type="hidden" id="tags" name="Tags" />
+    </div>
+    <div class="d-flex justify-content-between mt-4">
+        <button type="submit" class="btn btn-success">Zapisz relację</button>
+        <a asp-action="Stories" class="btn btn-secondary">Anuluj</a>
+    </div>
+</form>
+
+<script src="~/js/uploadImages.js"></script>
+<script src="~/js/addTags.js"></script>

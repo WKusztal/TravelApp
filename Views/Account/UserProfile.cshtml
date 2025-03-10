@@ -1,0 +1,69 @@
+@model TravelApp.Models.User
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container profile-container">
+    <div class="row">
+        <div class="col-12 d-flex profile-header">
+            <div class="avatar-section">
+                <div class="avatar-container">
+                    @if (string.IsNullOrEmpty(Model.AvatarPath))
+                    {
+                        <img src="~/images/default-user-image.jpg" alt="Default Avatar" class="img-fluid" />
+                    }
+                    else
+                    {
+                        <img src="~/uploads/@Model.AvatarPath" alt="Avatar" class="img-fluid" />
+                    }
+                </div>
+                <button id="follow-button" 
+                        class="btn-follow @(ViewData["IsFollowing"] as bool? == true ? "following" : "")" 
+                        data-user-id="@Model.UserId">
+                    @(ViewData["IsFollowing"] as bool? == true ? "Obserwujesz" : "Obserwuj")
+                </button>
+
+       
+                <input type="hidden" name="__RequestVerificationToken" value="@ViewData["RequestVerificationToken"]" />
+            </div>
+
+            <div class="user-info d-flex flex-column justify-content-center">
+                <div class="username">@Model.Username</div>
+                <div class="user-stats">
+                    <span class="stat">
+                        <a href="@Url.Action("Followers", "Account", new { userId = Model.UserId })">
+                            Obserwujący: @ViewData["FollowersCount"]
+                        </a>
+                    </span>
+                    
+                    <span class="stat">
+                        <a href="@Url.Action("Following", "Account", new { userId = Model.UserId })">
+                            Obserwowani: @ViewData["FollowingCount"]
+                        </a>
+                    </span>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <h4 class="bio-header">O mnie:</h4>
+                <div id="bio-display" class="bio-content">
+                    @if (string.IsNullOrEmpty(Model.Bio))
+                    {
+                        <p class="text-muted">Ten użytkownik jeszcze nic o sobie nie napisał.</p>
+                    }
+                    else
+                    {
+                        <p>@Model.Bio</p>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/followButton.js"></script>
+<link rel="stylesheet" href="~/css/profileView.css">

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - TravelApp</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/style.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">TravelApp</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item @(ViewData["ActiveNavItem"] as string == "Home" ? "active" : "")">
+                    <a class="nav-link" asp-controller="Home" asp-action="Index">Strona główna</a>
+                </li>
+                <li class="nav-item @(ViewData["ActiveNavItem"] as string == "About" ? "active" : "")">
+                    <a class="nav-link" asp-controller="Home" asp-action="About">O aplikacji</a>
+                </li>
+                <li class="nav-item @(ViewData["ActiveNavItem"] as string == "Stories" ? "active" : "")">
+                    <a class="nav-link" asp-controller="Home" asp-action="Stories">Relacje</a>
+                </li>
+                <li class="nav-item @(ViewData["ActiveNavItem"] as string == "Articles" ? "active" : "")">
+                    <a class="nav-link" asp-controller="Article" asp-action="Articles">Poradniki</a>
+                </li>
+                <li class="nav-item @(ViewData["ActiveNavItem"] as string == "Contact" ? "active" : "")">
+                    <a class="nav-link" asp-controller="Home" asp-action="Contact">Kontakt</a>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav ml-auto">
+                @if (User.Identity != null && User.Identity.IsAuthenticated)
+                {
+                    <li class="nav-item">
+                        <span class="navbar-text welcome-message">Witaj, @User.Identity.Name!</span>
+                    </li>
+
+                    @if (User.IsInRole("Admin") || User.IsInRole("Moderator"))
+                    {
+                        <li class="nav-item @(ViewData["ActiveNavItem"] as string == "UsersReports" ? "active" : "")">
+                            <a class="nav-link" asp-controller="Admin" asp-action="UsersReports">Zgłoszenia</a>
+                        </li>
+                    }
+
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <li class="nav-item @(ViewData["ActiveNavItem"] as string == "ManageUsers" ? "active" : "")">
+                            <a class="nav-link" asp-controller="Admin" asp-action="ManageUsers">Panel administracyjny</a>
+                        </li>
+                    }
+
+                    <li class="nav-item dropdown @(ViewData["ActiveNavItem"] as string == "Profile" ? "active" : "")">
+                        <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Moje konto
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="accountDropdown">
+                            <a class="dropdown-item @(ViewData["ActiveNavItem"] as string == "Profile" ? "active" : "")" asp-controller="Account" asp-action="Profile">Mój profil</a>
+                            <a class="dropdown-item" asp-controller="Account" asp-action="Logout">Wyloguj się</a>
+                        </div>
+                    </li>
+
+                }
+                else
+                {
+                    <li class="nav-item">
+                        <a class="nav-link" href="/account/login">Zaloguj się</a>
+                    </li>
+                }
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        @RenderBody()
+    </div>
+
+    <footer class="text-center py-3 bg-light">
+        © Copyright 2025 Wojciech Kusztal
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+</body>
+</html>

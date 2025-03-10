@@ -1,0 +1,52 @@
+@model List<TravelApp.Models.User>
+@using System.Security.Claims
+
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var title = ViewData["Title"] as string;
+
+    int? currentUserId = null;
+    
+    if (User.Identity?.IsAuthenticated == true)
+    {
+        var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier);
+        if (userIdClaim != null)
+        {
+            currentUserId = int.TryParse(userIdClaim.Value, out int parsedId) ? parsedId : null;
+        }
+    }
+}
+
+<div class="container">
+    <h2>@title</h2>
+    
+    <ul class="list-group">
+        @foreach (var user in Model)
+        {
+            <li class="list-group-item d-flex align-items-center">
+                <img src="@(string.IsNullOrEmpty(user.AvatarPath) ? Url.Content("~/images/default-user-image.jpg") : Url.Content("~/uploads/" + user.AvatarPath))"
+                    alt="Avatar"
+                    class="rounded-circle"
+                    width="50" height="50"
+                    style="margin-right: 15px;" />
+
+
+                @if (currentUserId.HasValue && user.UserId == currentUserId.Value)
+                {
+                    <a asp-action="Profile" asp-controller="Account" class="user-link">
+                        <strong>@user.Username</strong>
+                    </a>
+                }
+                else
+                {
+                    <a asp-action="UserProfile" asp-controller="Account" asp-route-userId="@user.UserId" class="user-link">
+                        <strong>@user.Username</strong>
+                    </a>
+                }
+            </li>
+        }
+    </ul>
+
+    <a href="javascript:history.back()" class="btn btn-secondary mt-3">Powrót</a>
+</div>

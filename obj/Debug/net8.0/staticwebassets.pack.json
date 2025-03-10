@@ -1,0 +1,893 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\css\\admin.css",
+      "PackagePath": "staticwebassets\\css\\admin.css"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\css\\articleCollage.css",
+      "PackagePath": "staticwebassets\\css\\articleCollage.css"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\css\\articleDetails.css",
+      "PackagePath": "staticwebassets\\css\\articleDetails.css"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\css\\articles.css",
+      "PackagePath": "staticwebassets\\css\\articles.css"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\css\\comments.css",
+      "PackagePath": "staticwebassets\\css\\comments.css"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\css\\loginUser.css",
+      "PackagePath": "staticwebassets\\css\\loginUser.css"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\css\\profileView.css",
+      "PackagePath": "staticwebassets\\css\\profileView.css"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\css\\stories.css",
+      "PackagePath": "staticwebassets\\css\\stories.css"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\css\\storyCollage.css",
+      "PackagePath": "staticwebassets\\css\\storyCollage.css"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\css\\storyDetails.css",
+      "PackagePath": "staticwebassets\\css\\storyDetails.css"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\images\\background-image.webp",
+      "PackagePath": "staticwebassets\\images\\background-image.webp"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\images\\default-story-image.jpg",
+      "PackagePath": "staticwebassets\\images\\default-story-image.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\images\\default-user-image.jpg",
+      "PackagePath": "staticwebassets\\images\\default-user-image.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\images\\slide1.jpg",
+      "PackagePath": "staticwebassets\\images\\slide1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\images\\slide2.jpg",
+      "PackagePath": "staticwebassets\\images\\slide2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\images\\slide3.jpg",
+      "PackagePath": "staticwebassets\\images\\slide3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\js\\addTags.js",
+      "PackagePath": "staticwebassets\\js\\addTags.js"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\js\\articleCollage.js",
+      "PackagePath": "staticwebassets\\js\\articleCollage.js"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\js\\comments.js",
+      "PackagePath": "staticwebassets\\js\\comments.js"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\js\\deleteArticleImages.js",
+      "PackagePath": "staticwebassets\\js\\deleteArticleImages.js"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\js\\deleteComment.js",
+      "PackagePath": "staticwebassets\\js\\deleteComment.js"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\js\\deleteImages.js",
+      "PackagePath": "staticwebassets\\js\\deleteImages.js"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\js\\deleteStory.js",
+      "PackagePath": "staticwebassets\\js\\deleteStory.js"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\js\\deleteStoryAdmin.js",
+      "PackagePath": "staticwebassets\\js\\deleteStoryAdmin.js"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\js\\editProfile.js",
+      "PackagePath": "staticwebassets\\js\\editProfile.js"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\js\\followButton.js",
+      "PackagePath": "staticwebassets\\js\\followButton.js"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\js\\likeStory.js",
+      "PackagePath": "staticwebassets\\js\\likeStory.js"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\js\\reportStory.js",
+      "PackagePath": "staticwebassets\\js\\reportStory.js"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\js\\showFilters.js",
+      "PackagePath": "staticwebassets\\js\\showFilters.js"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\js\\storyCollage.js",
+      "PackagePath": "staticwebassets\\js\\storyCollage.js"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\js\\uploadImages.js",
+      "PackagePath": "staticwebassets\\js\\uploadImages.js"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\00e62d21-e3f6-41d9-8b88-f3ff41d2b2dd.webp",
+      "PackagePath": "staticwebassets\\uploads\\00e62d21-e3f6-41d9-8b88-f3ff41d2b2dd.webp"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\01dbf480-65f4-426d-874e-ac04b84828cd.jpg",
+      "PackagePath": "staticwebassets\\uploads\\01dbf480-65f4-426d-874e-ac04b84828cd.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\01f3fcf8-6768-456a-953e-bb56482cedaf.jpg",
+      "PackagePath": "staticwebassets\\uploads\\01f3fcf8-6768-456a-953e-bb56482cedaf.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\042ab546-65bc-4923-a0b1-300420773afe.jpg",
+      "PackagePath": "staticwebassets\\uploads\\042ab546-65bc-4923-a0b1-300420773afe.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\04773159-1073-4cdb-be9d-a5540240dca1.jpg",
+      "PackagePath": "staticwebassets\\uploads\\04773159-1073-4cdb-be9d-a5540240dca1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\04fe3daa-3120-4df0-a585-9439a288289e.jpg",
+      "PackagePath": "staticwebassets\\uploads\\04fe3daa-3120-4df0-a585-9439a288289e.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\06039407-c648-4a68-a9ab-27ee8587cd04.jpg",
+      "PackagePath": "staticwebassets\\uploads\\06039407-c648-4a68-a9ab-27ee8587cd04.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\080b9384-e2e0-4f47-b341-0d2e365d4ff9.jpg",
+      "PackagePath": "staticwebassets\\uploads\\080b9384-e2e0-4f47-b341-0d2e365d4ff9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\0910f732-6ddf-45c6-986c-0a74211f1691.webp",
+      "PackagePath": "staticwebassets\\uploads\\0910f732-6ddf-45c6-986c-0a74211f1691.webp"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\097ceca2-2b9e-416c-ac73-8914a994f49d.jpg",
+      "PackagePath": "staticwebassets\\uploads\\097ceca2-2b9e-416c-ac73-8914a994f49d.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\0b32bc4b-5d8a-419b-bbb3-931dba03958d.jpg",
+      "PackagePath": "staticwebassets\\uploads\\0b32bc4b-5d8a-419b-bbb3-931dba03958d.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\0bcb6d07-7de9-46f9-b7e7-9780dd41408b.jpg",
+      "PackagePath": "staticwebassets\\uploads\\0bcb6d07-7de9-46f9-b7e7-9780dd41408b.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\0de7a5f9-9be2-408d-b612-d425c665bc75.jpg",
+      "PackagePath": "staticwebassets\\uploads\\0de7a5f9-9be2-408d-b612-d425c665bc75.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\0deffb6e-f256-4d54-9af9-bf204749e4a0.webp",
+      "PackagePath": "staticwebassets\\uploads\\0deffb6e-f256-4d54-9af9-bf204749e4a0.webp"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\117113eb-3963-43d1-af33-44ae0b4d2737.jpg",
+      "PackagePath": "staticwebassets\\uploads\\117113eb-3963-43d1-af33-44ae0b4d2737.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\13f82e20-c74e-47c8-8f37-997b715d09bd.jpg",
+      "PackagePath": "staticwebassets\\uploads\\13f82e20-c74e-47c8-8f37-997b715d09bd.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\14312485-e7c1-415b-80de-91fbfe3c8a7b.jpg",
+      "PackagePath": "staticwebassets\\uploads\\14312485-e7c1-415b-80de-91fbfe3c8a7b.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\14339f17-a1aa-46e1-94c4-2e67e8a51ce7.jpg",
+      "PackagePath": "staticwebassets\\uploads\\14339f17-a1aa-46e1-94c4-2e67e8a51ce7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\154ff989-8a91-4830-93f3-32d0706f13b8.webp",
+      "PackagePath": "staticwebassets\\uploads\\154ff989-8a91-4830-93f3-32d0706f13b8.webp"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\1697f10b-21d3-4ddf-b690-c210e1f15835.jpg",
+      "PackagePath": "staticwebassets\\uploads\\1697f10b-21d3-4ddf-b690-c210e1f15835.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\16b1c2c4-810e-4095-8347-7dfce3289694.webp",
+      "PackagePath": "staticwebassets\\uploads\\16b1c2c4-810e-4095-8347-7dfce3289694.webp"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\1712f56e-ec45-4e8e-85a6-781d1a0dc9bb.jpg",
+      "PackagePath": "staticwebassets\\uploads\\1712f56e-ec45-4e8e-85a6-781d1a0dc9bb.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\1d10db2d-151b-4640-a2ac-82407d45050f.jpg",
+      "PackagePath": "staticwebassets\\uploads\\1d10db2d-151b-4640-a2ac-82407d45050f.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\20c48181-0ae6-4215-8976-93068db2a9e0.webp",
+      "PackagePath": "staticwebassets\\uploads\\20c48181-0ae6-4215-8976-93068db2a9e0.webp"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\21bc69b0-1eb8-4f24-94a2-e23e130e17bc.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\21bc69b0-1eb8-4f24-94a2-e23e130e17bc.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\2342a65c-096c-4269-95b4-a08cd19f753b.webp",
+      "PackagePath": "staticwebassets\\uploads\\2342a65c-096c-4269-95b4-a08cd19f753b.webp"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\23436b7e-f167-4283-9792-fcbb3b920ba9.jpg",
+      "PackagePath": "staticwebassets\\uploads\\23436b7e-f167-4283-9792-fcbb3b920ba9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\2379f726-9982-4214-be18-ae86937ff7f1.jpg",
+      "PackagePath": "staticwebassets\\uploads\\2379f726-9982-4214-be18-ae86937ff7f1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\23e4c4d1-1a88-4f6c-a578-75be9942a66d.webp",
+      "PackagePath": "staticwebassets\\uploads\\23e4c4d1-1a88-4f6c-a578-75be9942a66d.webp"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\25153bc0-b353-4534-84e0-179cfd850f4c.jpg",
+      "PackagePath": "staticwebassets\\uploads\\25153bc0-b353-4534-84e0-179cfd850f4c.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\28fad66a-11f6-4875-9205-6612abdfb70d.jpg",
+      "PackagePath": "staticwebassets\\uploads\\28fad66a-11f6-4875-9205-6612abdfb70d.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\296beedc-155b-4b81-a176-6f7045025655.webp",
+      "PackagePath": "staticwebassets\\uploads\\296beedc-155b-4b81-a176-6f7045025655.webp"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\2a078135-d880-4c61-a0ff-f142c4f38aff.jpg",
+      "PackagePath": "staticwebassets\\uploads\\2a078135-d880-4c61-a0ff-f142c4f38aff.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\2bd1f07b-0ac2-4481-9a88-0430af13dca5.png",
+      "PackagePath": "staticwebassets\\uploads\\2bd1f07b-0ac2-4481-9a88-0430af13dca5.png"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\2c268bc9-e0ae-4798-960d-baa3255c1004.jpg",
+      "PackagePath": "staticwebassets\\uploads\\2c268bc9-e0ae-4798-960d-baa3255c1004.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\2ec8d354-deca-44b0-9e0c-b0ab75eb2a72.jpg",
+      "PackagePath": "staticwebassets\\uploads\\2ec8d354-deca-44b0-9e0c-b0ab75eb2a72.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\2fee670f-30ef-4dda-9812-eac4c0f9cd5e.jpg",
+      "PackagePath": "staticwebassets\\uploads\\2fee670f-30ef-4dda-9812-eac4c0f9cd5e.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\30ef6dc7-85dc-4981-a4db-0ebf7c1926db.jpg",
+      "PackagePath": "staticwebassets\\uploads\\30ef6dc7-85dc-4981-a4db-0ebf7c1926db.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\3241fddb-9ff5-4e0e-a287-e42ba1636746.jpg",
+      "PackagePath": "staticwebassets\\uploads\\3241fddb-9ff5-4e0e-a287-e42ba1636746.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\325b304d-4860-44fd-ae83-7b2a54c134f0.webp",
+      "PackagePath": "staticwebassets\\uploads\\325b304d-4860-44fd-ae83-7b2a54c134f0.webp"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\3274db4e-e007-455c-bf4a-3f01365c8dd3.jpg",
+      "PackagePath": "staticwebassets\\uploads\\3274db4e-e007-455c-bf4a-3f01365c8dd3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\33c83107-eda3-40a9-9100-05acb034cfb0.webp",
+      "PackagePath": "staticwebassets\\uploads\\33c83107-eda3-40a9-9100-05acb034cfb0.webp"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\360c02aa-5c10-477e-9d3d-dbc132dddf0f.jpg",
+      "PackagePath": "staticwebassets\\uploads\\360c02aa-5c10-477e-9d3d-dbc132dddf0f.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\3635d56c-f7ef-4b3c-84b7-32a390ea56e9.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\3635d56c-f7ef-4b3c-84b7-32a390ea56e9.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\365cb81c-38f9-49be-8606-b32212f0723b.webp",
+      "PackagePath": "staticwebassets\\uploads\\365cb81c-38f9-49be-8606-b32212f0723b.webp"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\373d3aaa-c160-4770-9a2b-3ee5933502c2.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\373d3aaa-c160-4770-9a2b-3ee5933502c2.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\39027fe9-c071-4ec5-9725-c3de104c9eeb.jpg",
+      "PackagePath": "staticwebassets\\uploads\\39027fe9-c071-4ec5-9725-c3de104c9eeb.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\3a7cc308-2f7b-4877-beaf-37ce52e992dd.webp",
+      "PackagePath": "staticwebassets\\uploads\\3a7cc308-2f7b-4877-beaf-37ce52e992dd.webp"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\3c0a2bb3-71d4-4ab5-a8f6-30e9c37be3cf.webp",
+      "PackagePath": "staticwebassets\\uploads\\3c0a2bb3-71d4-4ab5-a8f6-30e9c37be3cf.webp"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\3c337126-14e0-4331-a8a2-4958ca7cc908.jpg",
+      "PackagePath": "staticwebassets\\uploads\\3c337126-14e0-4331-a8a2-4958ca7cc908.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\3e323988-cf53-44e2-8e66-354abbeb5705.jpg",
+      "PackagePath": "staticwebassets\\uploads\\3e323988-cf53-44e2-8e66-354abbeb5705.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\3effa5c6-c618-4dba-82db-919c12b253e2.jpg",
+      "PackagePath": "staticwebassets\\uploads\\3effa5c6-c618-4dba-82db-919c12b253e2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\41adb73f-3260-4d8f-8fb1-5b49c34cda1e.jpg",
+      "PackagePath": "staticwebassets\\uploads\\41adb73f-3260-4d8f-8fb1-5b49c34cda1e.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\43af52b9-c2d4-452a-8054-dff682ded2b2.jpg",
+      "PackagePath": "staticwebassets\\uploads\\43af52b9-c2d4-452a-8054-dff682ded2b2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\43d9d7ed-8d49-43ab-b829-22e8227b76d1.jpg",
+      "PackagePath": "staticwebassets\\uploads\\43d9d7ed-8d49-43ab-b829-22e8227b76d1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\44c5ef01-6e4d-4fec-bf7b-a2f81cd4d52e.jpg",
+      "PackagePath": "staticwebassets\\uploads\\44c5ef01-6e4d-4fec-bf7b-a2f81cd4d52e.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\45d1b54c-6895-4c9c-9430-ad264f6e17d7.webp",
+      "PackagePath": "staticwebassets\\uploads\\45d1b54c-6895-4c9c-9430-ad264f6e17d7.webp"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\46f81524-9f03-4fd4-ae95-2120111a673a.jpg",
+      "PackagePath": "staticwebassets\\uploads\\46f81524-9f03-4fd4-ae95-2120111a673a.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\48a65ea7-191c-4b97-8c08-381d57bb566f.webp",
+      "PackagePath": "staticwebassets\\uploads\\48a65ea7-191c-4b97-8c08-381d57bb566f.webp"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\4a09ae3f-4b96-40be-a196-baec361f0baa.jpg",
+      "PackagePath": "staticwebassets\\uploads\\4a09ae3f-4b96-40be-a196-baec361f0baa.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\4c6f6c26-d7e6-4249-8260-89e168d2ad5c.jpg",
+      "PackagePath": "staticwebassets\\uploads\\4c6f6c26-d7e6-4249-8260-89e168d2ad5c.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\4c977391-6cc5-416a-a68b-df8c04a5c160.webp",
+      "PackagePath": "staticwebassets\\uploads\\4c977391-6cc5-416a-a68b-df8c04a5c160.webp"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\4d6524f5-ec25-48a1-9837-948dea81effc.jpg",
+      "PackagePath": "staticwebassets\\uploads\\4d6524f5-ec25-48a1-9837-948dea81effc.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\4dacbe1b-3e20-4ac4-ae16-5b96ac992b8f.jpg",
+      "PackagePath": "staticwebassets\\uploads\\4dacbe1b-3e20-4ac4-ae16-5b96ac992b8f.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\4e9be453-7e6f-4711-a834-020f6dc0b34d.webp",
+      "PackagePath": "staticwebassets\\uploads\\4e9be453-7e6f-4711-a834-020f6dc0b34d.webp"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\4e9d8475-8a33-471d-8128-8c358255f3ec.jpg",
+      "PackagePath": "staticwebassets\\uploads\\4e9d8475-8a33-471d-8128-8c358255f3ec.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\4eaed19c-0ef0-4523-8af3-28b1aebf4332.jpg",
+      "PackagePath": "staticwebassets\\uploads\\4eaed19c-0ef0-4523-8af3-28b1aebf4332.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\4f2df9e6-8d93-439b-9dde-46a237877621.webp",
+      "PackagePath": "staticwebassets\\uploads\\4f2df9e6-8d93-439b-9dde-46a237877621.webp"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\4fc27b9e-166b-46cc-88ca-52958f7d699d.jpg",
+      "PackagePath": "staticwebassets\\uploads\\4fc27b9e-166b-46cc-88ca-52958f7d699d.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\5244497c-fc4d-4d8f-b283-252a648ca46f.webp",
+      "PackagePath": "staticwebassets\\uploads\\5244497c-fc4d-4d8f-b283-252a648ca46f.webp"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\556d7a3f-bd47-44bf-9ff6-56b091691072.jpg",
+      "PackagePath": "staticwebassets\\uploads\\556d7a3f-bd47-44bf-9ff6-56b091691072.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\5c74e02f-5a9a-4828-8ecd-a1d8023e8d6a.jpg",
+      "PackagePath": "staticwebassets\\uploads\\5c74e02f-5a9a-4828-8ecd-a1d8023e8d6a.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\5fedab6e-455c-4864-8372-eb696b77e356.webp",
+      "PackagePath": "staticwebassets\\uploads\\5fedab6e-455c-4864-8372-eb696b77e356.webp"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\60c9ee27-f397-4d93-b17d-73aa8eb96444.webp",
+      "PackagePath": "staticwebassets\\uploads\\60c9ee27-f397-4d93-b17d-73aa8eb96444.webp"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\614ef77d-cef6-4343-acf3-87a68a908c53.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\614ef77d-cef6-4343-acf3-87a68a908c53.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\627b64a0-7901-47a8-95a2-929f03229e99.jpg",
+      "PackagePath": "staticwebassets\\uploads\\627b64a0-7901-47a8-95a2-929f03229e99.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\6465ae6f-c68e-4abf-8ff3-e53b3c62afa0.jpg",
+      "PackagePath": "staticwebassets\\uploads\\6465ae6f-c68e-4abf-8ff3-e53b3c62afa0.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\6723741c-bbe3-4e26-b969-c54c4e140b94.jpg",
+      "PackagePath": "staticwebassets\\uploads\\6723741c-bbe3-4e26-b969-c54c4e140b94.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\68b7da02-b94d-40dd-b069-760d26166d6a.jpg",
+      "PackagePath": "staticwebassets\\uploads\\68b7da02-b94d-40dd-b069-760d26166d6a.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\69733190-c34f-4cb0-a527-22cd09a7ce07.webp",
+      "PackagePath": "staticwebassets\\uploads\\69733190-c34f-4cb0-a527-22cd09a7ce07.webp"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\69b8602a-9939-457f-b5a7-14f83ad68ce1.webp",
+      "PackagePath": "staticwebassets\\uploads\\69b8602a-9939-457f-b5a7-14f83ad68ce1.webp"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\69e24614-9efe-40aa-a167-0f72b4ae93b6.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\69e24614-9efe-40aa-a167-0f72b4ae93b6.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\6a6e86f1-34c6-40b8-a6f0-ffab427f631f.jpg",
+      "PackagePath": "staticwebassets\\uploads\\6a6e86f1-34c6-40b8-a6f0-ffab427f631f.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\6a9418fc-9477-4029-8ff8-9892e032a4e9.jpg",
+      "PackagePath": "staticwebassets\\uploads\\6a9418fc-9477-4029-8ff8-9892e032a4e9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\6e9d8c97-e6ff-4a38-8e36-ca4f3c7a71ed.jpg",
+      "PackagePath": "staticwebassets\\uploads\\6e9d8c97-e6ff-4a38-8e36-ca4f3c7a71ed.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\6ecf2ec1-e766-42f9-b9cb-a2c2e760a473.jpg",
+      "PackagePath": "staticwebassets\\uploads\\6ecf2ec1-e766-42f9-b9cb-a2c2e760a473.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\71fa2375-fdb7-4c66-b208-065b18081b13.jpg",
+      "PackagePath": "staticwebassets\\uploads\\71fa2375-fdb7-4c66-b208-065b18081b13.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\727ab298-9a8c-460d-831b-14eb4b6736d8.webp",
+      "PackagePath": "staticwebassets\\uploads\\727ab298-9a8c-460d-831b-14eb4b6736d8.webp"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\72a0b9ae-0cf5-46d7-a6e3-38cc9f1884e2.webp",
+      "PackagePath": "staticwebassets\\uploads\\72a0b9ae-0cf5-46d7-a6e3-38cc9f1884e2.webp"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\732247c2-4342-43a5-9b88-f27d66b88a60.jpg",
+      "PackagePath": "staticwebassets\\uploads\\732247c2-4342-43a5-9b88-f27d66b88a60.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\74ea5a09-ddf9-4f5c-b863-5fc4c7a6f309.jpg",
+      "PackagePath": "staticwebassets\\uploads\\74ea5a09-ddf9-4f5c-b863-5fc4c7a6f309.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\74fb5a69-c121-46db-9c1f-33aec43accd0.jpg",
+      "PackagePath": "staticwebassets\\uploads\\74fb5a69-c121-46db-9c1f-33aec43accd0.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\78248745-5613-441c-8e68-aba1e0cbc48e.jpg",
+      "PackagePath": "staticwebassets\\uploads\\78248745-5613-441c-8e68-aba1e0cbc48e.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\79b7e3b7-4ea1-4a80-8a55-1752b6a60871.jpg",
+      "PackagePath": "staticwebassets\\uploads\\79b7e3b7-4ea1-4a80-8a55-1752b6a60871.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\79fe36f1-c8fd-4dd4-a362-2153f5d594cb.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\79fe36f1-c8fd-4dd4-a362-2153f5d594cb.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\7e3a32fb-ab77-405b-b15d-78f12390b8dd.jpg",
+      "PackagePath": "staticwebassets\\uploads\\7e3a32fb-ab77-405b-b15d-78f12390b8dd.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\8194e408-002c-4a22-a879-b71beaa61072.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\8194e408-002c-4a22-a879-b71beaa61072.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\82508fa1-c288-4c13-ad11-6d71a001bb9e.jpg",
+      "PackagePath": "staticwebassets\\uploads\\82508fa1-c288-4c13-ad11-6d71a001bb9e.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\83277749-cb04-4f82-a851-9b14e60ae916.jpg",
+      "PackagePath": "staticwebassets\\uploads\\83277749-cb04-4f82-a851-9b14e60ae916.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\844e5d82-d187-448a-83b6-bf1cd0189c8e.jpg",
+      "PackagePath": "staticwebassets\\uploads\\844e5d82-d187-448a-83b6-bf1cd0189c8e.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\85c08e27-124e-4b5f-b922-0457670ea6c7.jpg",
+      "PackagePath": "staticwebassets\\uploads\\85c08e27-124e-4b5f-b922-0457670ea6c7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\895a5542-1032-42ef-a582-a9553b14043f.jpg",
+      "PackagePath": "staticwebassets\\uploads\\895a5542-1032-42ef-a582-a9553b14043f.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\8a44c056-fbd8-410e-8e02-7b500e8fae55.jpg",
+      "PackagePath": "staticwebassets\\uploads\\8a44c056-fbd8-410e-8e02-7b500e8fae55.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\8ecec675-839a-4abb-96c9-dd7c15a0a1fa.jpg",
+      "PackagePath": "staticwebassets\\uploads\\8ecec675-839a-4abb-96c9-dd7c15a0a1fa.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\8f43b187-7cd8-423f-9587-462563d968d6.webp",
+      "PackagePath": "staticwebassets\\uploads\\8f43b187-7cd8-423f-9587-462563d968d6.webp"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\915f98f5-0b62-4af6-9734-45dadf018b62.jpg",
+      "PackagePath": "staticwebassets\\uploads\\915f98f5-0b62-4af6-9734-45dadf018b62.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\91699aff-5a58-488d-83bd-46145133f64a.webp",
+      "PackagePath": "staticwebassets\\uploads\\91699aff-5a58-488d-83bd-46145133f64a.webp"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\925e31fa-4b17-48ff-b7e4-04bc550a85c0.jpg",
+      "PackagePath": "staticwebassets\\uploads\\925e31fa-4b17-48ff-b7e4-04bc550a85c0.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\9865b6b4-5368-46ca-8503-5138d0e31475.jpg",
+      "PackagePath": "staticwebassets\\uploads\\9865b6b4-5368-46ca-8503-5138d0e31475.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\98dce5a4-6dd4-40aa-a107-963d9ad0f913.jpg",
+      "PackagePath": "staticwebassets\\uploads\\98dce5a4-6dd4-40aa-a107-963d9ad0f913.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\9a25ac76-8df5-4fd2-b873-516d2c7c424d.jpg",
+      "PackagePath": "staticwebassets\\uploads\\9a25ac76-8df5-4fd2-b873-516d2c7c424d.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\9ac6aca3-30bf-49f6-a507-ad080849876a.jpg",
+      "PackagePath": "staticwebassets\\uploads\\9ac6aca3-30bf-49f6-a507-ad080849876a.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\9b67dd29-d560-41ee-80eb-7c40595e8c38.webp",
+      "PackagePath": "staticwebassets\\uploads\\9b67dd29-d560-41ee-80eb-7c40595e8c38.webp"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\9c05eae9-6706-4f4b-b9a0-6edb9d269075.webp",
+      "PackagePath": "staticwebassets\\uploads\\9c05eae9-6706-4f4b-b9a0-6edb9d269075.webp"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\9cfc621a-73ed-4c84-a6d3-25675818353c.webp",
+      "PackagePath": "staticwebassets\\uploads\\9cfc621a-73ed-4c84-a6d3-25675818353c.webp"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\9e766761-8238-4205-b01a-e5002f35f184.jpg",
+      "PackagePath": "staticwebassets\\uploads\\9e766761-8238-4205-b01a-e5002f35f184.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\Greece.webp",
+      "PackagePath": "staticwebassets\\uploads\\Greece.webp"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\a03f9d05-0e73-44db-be61-7875ec075143.webp",
+      "PackagePath": "staticwebassets\\uploads\\a03f9d05-0e73-44db-be61-7875ec075143.webp"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\a11dc6fd-53ad-4312-9b56-a85b66dc5481.jpg",
+      "PackagePath": "staticwebassets\\uploads\\a11dc6fd-53ad-4312-9b56-a85b66dc5481.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\a1362f63-7d0d-4db5-9bc0-d23dd0a3e565.webp",
+      "PackagePath": "staticwebassets\\uploads\\a1362f63-7d0d-4db5-9bc0-d23dd0a3e565.webp"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\a3054028-860c-450e-afae-f7b9b19fe182.jpg",
+      "PackagePath": "staticwebassets\\uploads\\a3054028-860c-450e-afae-f7b9b19fe182.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\a474e622-4111-4f00-b7d7-e26c711ecb7d.webp",
+      "PackagePath": "staticwebassets\\uploads\\a474e622-4111-4f00-b7d7-e26c711ecb7d.webp"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\a6369cc2-f276-4c46-a81f-f3005e3acf17.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\a6369cc2-f276-4c46-a81f-f3005e3acf17.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\a65a1528-a3fc-4cdd-a638-6ea25a7a67df.webp",
+      "PackagePath": "staticwebassets\\uploads\\a65a1528-a3fc-4cdd-a638-6ea25a7a67df.webp"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\a66deda9-fd40-47fe-b04c-1bf6efd2770d.jpg",
+      "PackagePath": "staticwebassets\\uploads\\a66deda9-fd40-47fe-b04c-1bf6efd2770d.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\a69fd0c3-406a-44b1-8d4c-8cf7a547fa4e.jpg",
+      "PackagePath": "staticwebassets\\uploads\\a69fd0c3-406a-44b1-8d4c-8cf7a547fa4e.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\a8b03a25-e9e2-4225-aaa8-f714c91a6eb4.jpg",
+      "PackagePath": "staticwebassets\\uploads\\a8b03a25-e9e2-4225-aaa8-f714c91a6eb4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\a926735a-8176-4336-9d2f-5ae35e5f5089.jpg",
+      "PackagePath": "staticwebassets\\uploads\\a926735a-8176-4336-9d2f-5ae35e5f5089.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\aa1f9730-7f44-461c-bc7e-cfb64d1c56fc.jpg",
+      "PackagePath": "staticwebassets\\uploads\\aa1f9730-7f44-461c-bc7e-cfb64d1c56fc.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\aae19533-8a79-4e97-a048-878fc679d9bc.jpg",
+      "PackagePath": "staticwebassets\\uploads\\aae19533-8a79-4e97-a048-878fc679d9bc.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\ac440e89-9e40-4b3e-90ed-2a7493591e91.jpg",
+      "PackagePath": "staticwebassets\\uploads\\ac440e89-9e40-4b3e-90ed-2a7493591e91.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\ad17615c-bc0e-416e-a094-8d660f9b4712.webp",
+      "PackagePath": "staticwebassets\\uploads\\ad17615c-bc0e-416e-a094-8d660f9b4712.webp"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\ae96957f-c0d2-417d-a543-60d352017d90.jpg",
+      "PackagePath": "staticwebassets\\uploads\\ae96957f-c0d2-417d-a543-60d352017d90.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\afa17b4d-0b8c-4c4b-a63c-16462570f987.jpg",
+      "PackagePath": "staticwebassets\\uploads\\afa17b4d-0b8c-4c4b-a63c-16462570f987.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\b107fe4b-dafd-45c9-9568-1f494f0a1815.jpg",
+      "PackagePath": "staticwebassets\\uploads\\b107fe4b-dafd-45c9-9568-1f494f0a1815.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\b1ade992-dbcf-429c-aeb6-83bcc3a626ee.jpg",
+      "PackagePath": "staticwebassets\\uploads\\b1ade992-dbcf-429c-aeb6-83bcc3a626ee.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\b213070d-e91d-44e8-b0c5-61a7b87eee9a.webp",
+      "PackagePath": "staticwebassets\\uploads\\b213070d-e91d-44e8-b0c5-61a7b87eee9a.webp"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\b33d97c5-1be9-43af-bcab-93d76a618a6a.jpg",
+      "PackagePath": "staticwebassets\\uploads\\b33d97c5-1be9-43af-bcab-93d76a618a6a.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\b4c83ae6-ce50-4eaf-b4ac-6b5244f5a0bd.jpg",
+      "PackagePath": "staticwebassets\\uploads\\b4c83ae6-ce50-4eaf-b4ac-6b5244f5a0bd.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\b7f9a93e-7e34-4dbb-b260-ad7bebb9e916.webp",
+      "PackagePath": "staticwebassets\\uploads\\b7f9a93e-7e34-4dbb-b260-ad7bebb9e916.webp"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\b9e347da-448f-41d7-9a6b-5a5b38df5adf.webp",
+      "PackagePath": "staticwebassets\\uploads\\b9e347da-448f-41d7-9a6b-5a5b38df5adf.webp"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\ba50b8d0-999c-4a1b-900e-4c8abdb899b6.jpg",
+      "PackagePath": "staticwebassets\\uploads\\ba50b8d0-999c-4a1b-900e-4c8abdb899b6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\ba75c295-33c8-4ded-96b5-c38fcd65f9f5.jpg",
+      "PackagePath": "staticwebassets\\uploads\\ba75c295-33c8-4ded-96b5-c38fcd65f9f5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\bb9dad0e-c2ae-4f11-b014-c3d271451a4a.webp",
+      "PackagePath": "staticwebassets\\uploads\\bb9dad0e-c2ae-4f11-b014-c3d271451a4a.webp"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\be8beff6-f5d2-465f-ac84-85a72c105612.jpg",
+      "PackagePath": "staticwebassets\\uploads\\be8beff6-f5d2-465f-ac84-85a72c105612.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\c02b1e80-cc1b-4ef9-b15a-744ebfac41fc.webp",
+      "PackagePath": "staticwebassets\\uploads\\c02b1e80-cc1b-4ef9-b15a-744ebfac41fc.webp"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\c24b5da8-6600-459b-be6f-cd238b0afcbf.jpg",
+      "PackagePath": "staticwebassets\\uploads\\c24b5da8-6600-459b-be6f-cd238b0afcbf.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\c4665399-1074-4326-b986-fbf31ca4b6cd.jpg",
+      "PackagePath": "staticwebassets\\uploads\\c4665399-1074-4326-b986-fbf31ca4b6cd.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\c4bc348f-e617-4161-b78f-9746ecc9de0c.jpg",
+      "PackagePath": "staticwebassets\\uploads\\c4bc348f-e617-4161-b78f-9746ecc9de0c.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\c6e67365-9926-4a5a-8a26-f450877eaa9a.jpg",
+      "PackagePath": "staticwebassets\\uploads\\c6e67365-9926-4a5a-8a26-f450877eaa9a.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\c701bcc7-53a0-4221-8545-221591f53449.jpg",
+      "PackagePath": "staticwebassets\\uploads\\c701bcc7-53a0-4221-8545-221591f53449.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\cbf86e84-7682-4a0a-8249-7526149e1f7c.jpg",
+      "PackagePath": "staticwebassets\\uploads\\cbf86e84-7682-4a0a-8249-7526149e1f7c.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\cda15465-d094-44d2-87eb-c3e8c52c2398.webp",
+      "PackagePath": "staticwebassets\\uploads\\cda15465-d094-44d2-87eb-c3e8c52c2398.webp"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\ce3e8175-a1fd-4025-9b8b-3fcb46fecb05.jpg",
+      "PackagePath": "staticwebassets\\uploads\\ce3e8175-a1fd-4025-9b8b-3fcb46fecb05.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\ce960250-6e75-40d3-a82b-18618e8e4039.jpg",
+      "PackagePath": "staticwebassets\\uploads\\ce960250-6e75-40d3-a82b-18618e8e4039.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\cfd6d20e-15a5-468b-b783-47a3c7d6f52b.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\cfd6d20e-15a5-468b-b783-47a3c7d6f52b.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\d0a54e19-35e7-46fb-955b-392263a55f71.jpg",
+      "PackagePath": "staticwebassets\\uploads\\d0a54e19-35e7-46fb-955b-392263a55f71.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\d1315c39-ab79-4af8-bd21-f6548776ccc6.jpg",
+      "PackagePath": "staticwebassets\\uploads\\d1315c39-ab79-4af8-bd21-f6548776ccc6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\d3030d7b-3efc-450e-9b41-807f36aa0d78.jpg",
+      "PackagePath": "staticwebassets\\uploads\\d3030d7b-3efc-450e-9b41-807f36aa0d78.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\d450a2fc-8f5c-42fb-961f-450e645884bd.jpg",
+      "PackagePath": "staticwebassets\\uploads\\d450a2fc-8f5c-42fb-961f-450e645884bd.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\d57696cf-2495-4d1e-ba64-8123af1f9f92.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\d57696cf-2495-4d1e-ba64-8123af1f9f92.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\d759583f-5d9e-4a0a-9895-002a608b233b.jpg",
+      "PackagePath": "staticwebassets\\uploads\\d759583f-5d9e-4a0a-9895-002a608b233b.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\d8d2fa41-c922-42e9-bbef-084542028df6.jpg",
+      "PackagePath": "staticwebassets\\uploads\\d8d2fa41-c922-42e9-bbef-084542028df6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\da6595b9-0a79-443d-9f89-2329ba8449ac.jpg",
+      "PackagePath": "staticwebassets\\uploads\\da6595b9-0a79-443d-9f89-2329ba8449ac.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\dc5acc59-f5ad-4533-9f60-05cd6062924f.webp",
+      "PackagePath": "staticwebassets\\uploads\\dc5acc59-f5ad-4533-9f60-05cd6062924f.webp"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\dcb2b406-6feb-47d3-a68b-328e73e3bb80.webp",
+      "PackagePath": "staticwebassets\\uploads\\dcb2b406-6feb-47d3-a68b-328e73e3bb80.webp"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\de022238-f6ec-48cb-8725-9687fc9860ac.jpg",
+      "PackagePath": "staticwebassets\\uploads\\de022238-f6ec-48cb-8725-9687fc9860ac.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\e1c3ba5e-9282-40b5-b4e2-45a7c3cf3d01.jpg",
+      "PackagePath": "staticwebassets\\uploads\\e1c3ba5e-9282-40b5-b4e2-45a7c3cf3d01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\e27db685-14db-4f8d-8ac3-682addb8d482.jpg",
+      "PackagePath": "staticwebassets\\uploads\\e27db685-14db-4f8d-8ac3-682addb8d482.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\e57ed0c2-400c-4025-b859-04d0932d71fe.jpg",
+      "PackagePath": "staticwebassets\\uploads\\e57ed0c2-400c-4025-b859-04d0932d71fe.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\e82d3a19-3134-4148-9628-9720095579ad.jpg",
+      "PackagePath": "staticwebassets\\uploads\\e82d3a19-3134-4148-9628-9720095579ad.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\e9e587f0-1799-47f3-a69d-359c231b9279.webp",
+      "PackagePath": "staticwebassets\\uploads\\e9e587f0-1799-47f3-a69d-359c231b9279.webp"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\ecd05892-fed3-4d8a-ab6f-da98ca36b757.jpg",
+      "PackagePath": "staticwebassets\\uploads\\ecd05892-fed3-4d8a-ab6f-da98ca36b757.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\eee49c31-8f26-4a12-94a2-fd03f9ae8649.webp",
+      "PackagePath": "staticwebassets\\uploads\\eee49c31-8f26-4a12-94a2-fd03f9ae8649.webp"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\f4bdb946-6ff7-4ed1-8ba6-c33b0b76609c.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\f4bdb946-6ff7-4ed1-8ba6-c33b0b76609c.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\f4e11f9e-bfa2-4b35-bae1-95ed5da110bc.jpg",
+      "PackagePath": "staticwebassets\\uploads\\f4e11f9e-bfa2-4b35-bae1-95ed5da110bc.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\f6e04008-295c-4474-9a98-f52ef1c75339.jpg",
+      "PackagePath": "staticwebassets\\uploads\\f6e04008-295c-4474-9a98-f52ef1c75339.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\f6f9329d-4ae7-4ad5-9f0d-fe9d3188fa10.jpg",
+      "PackagePath": "staticwebassets\\uploads\\f6f9329d-4ae7-4ad5-9f0d-fe9d3188fa10.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\f700b46e-93a3-4024-b5b7-69cc01b35633.jpg",
+      "PackagePath": "staticwebassets\\uploads\\f700b46e-93a3-4024-b5b7-69cc01b35633.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\f7abf6ec-7962-42fa-a9e0-3e81f8e753bf.jpg",
+      "PackagePath": "staticwebassets\\uploads\\f7abf6ec-7962-42fa-a9e0-3e81f8e753bf.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\f925e2b4-a967-48d2-b3b8-96d76a4c1515.jpg",
+      "PackagePath": "staticwebassets\\uploads\\f925e2b4-a967-48d2-b3b8-96d76a4c1515.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\fb04ee45-055b-470d-b652-3ad1b5db2a5f.jpg",
+      "PackagePath": "staticwebassets\\uploads\\fb04ee45-055b-470d-b652-3ad1b5db2a5f.jpg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\fbb38fa4-293f-4988-b8e8-091a2d7a6a72.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\fbb38fa4-293f-4988-b8e8-091a2d7a6a72.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\fc275e29-2423-42ae-b433-580b8f635cad.webp",
+      "PackagePath": "staticwebassets\\uploads\\fc275e29-2423-42ae-b433-580b8f635cad.webp"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\feac4928-1c43-4f86-a6b4-2e2b1fb6c8ea.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\feac4928-1c43-4f86-a6b4-2e2b1fb6c8ea.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\disco\\Desktop\\TravelApp\\wwwroot\\uploads\\ff7a4b55-2726-467e-a216-da5c15e2011a.jpg",
+      "PackagePath": "staticwebassets\\uploads\\ff7a4b55-2726-467e-a216-da5c15e2011a.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.TravelApp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.TravelApp.props",
+      "PackagePath": "build\\TravelApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.TravelApp.props",
+      "PackagePath": "buildMultiTargeting\\TravelApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.TravelApp.props",
+      "PackagePath": "buildTransitive\\TravelApp.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

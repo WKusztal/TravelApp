@@ -1,0 +1,261 @@
+@model TravelApp.Models.Story
+@using System.Linq
+@using System.Security.Claims
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = Model.Title;
+    var currentUserId = ViewData["CurrentUserId"] as int?;
+    var userRole = User.FindFirstValue(ClaimTypes.Role); 
+    var canDelete = userRole == "Admin" || userRole == "Moderator"; 
+    bool isAdminOrModerator = (bool)(ViewData["IsAdminOrModerator"] ?? false);
+}
+
+
+
+<div class="container story-details">
+
+    <div class="mobile-buttons d-md-none"> 
+
+        <span class="story-date">@Model.CreatedAt.ToString("dd-MM-yyyy HH:mm")</span>
+
+        @if (User.IsInRole("Admin") || User.IsInRole("Moderator"))
+        {
+            <form asp-action="DeleteStoryByAdmin" asp-controller="Home" method="post">
+                @Html.AntiForgeryToken()
+                <input type="hidden" name="storyId" value="@Model.StoryId" />
+                <button type="submit" class="btn btn-danger">Usuń relację</button>
+            </form>
+        }
+
+        @if (currentUserId.HasValue && Model.Author != null && Model.Author.UserId != currentUserId.Value)
+        {
+            <button id="reportStoryBtnMobile" class="btn btn-danger report-btn">
+                🚩 Zgłoś
+            </button>
+        }
+
+        @if (currentUserId.HasValue && Model.Author != null && Model.Author.UserId == currentUserId.Value)
+        {
+            <a asp-action="EditStory" asp-controller="Home" asp-route-StoryId="@Model.StoryId" class="btn btn-primary">
+                Edytuj relację
+            </a>
+        }
+    </div>
+
+    <div class="d-flex align-items-center justify-content-start mb-4">
+        <span class="me-2"><strong>Autor relacji:</strong></span>
+        @if (Model.Author != null)
+        {
+            if (currentUserId.HasValue && Model.Author.UserId == currentUserId.Value)
+            {
+                <a asp-action="Profile" asp-controller="Account" class="author-link d-flex align-items-center">
+                    <img src="@(string.IsNullOrEmpty(Model.Author.AvatarPath) ? Url.Content("~/images/default-user-image.jpg") : Url.Content("~/uploads/" + Model.Author.AvatarPath))"
+                        alt="Avatar" class="author-avatar-large" />
+                    <span class="details-author-name">@Model.Author.Username</span>
+                </a>
+            }
+            else
+            {
+                <a asp-action="UserProfile" asp-controller="Account" asp-route-userId="@Model.Author.UserId" class="author-link d-flex align-items-center">
+                    <img src="@(string.IsNullOrEmpty(Model.Author.AvatarPath) ? Url.Content("~/images/default-user-image.jpg") : Url.Content("~/uploads/" + Model.Author.AvatarPath))"
+                        alt="Avatar" class="author-avatar-large" />
+                    <span class="details-author-name">@Model.Author.Username</span>
+                </a>
+            }
+        } 
+    </div>
+
+    <div class="story-header-container d-none d-md-flex">
+        @if (User.IsInRole("Admin") || User.IsInRole("Moderator"))
+        {
+            <form asp-action="DeleteStoryByAdmin" asp-controller="Home" method="post">
+                @Html.AntiForgeryToken()
+                <input type="hidden" name="storyId" value="@Model.StoryId" />
+                <button type="submit" class="btn btn-danger">Usuń relację</button>
+            </form>
+        }
+
+        <form id="deleteStoryAdminForm" asp-action="DeleteStoryByAdmin" asp-controller="Home" method="post" class="d-none">
+            <input type="hidden" name="storyId" value="@Model.StoryId" />
+        </form>
+
+        @if (currentUserId.HasValue && Model.Author != null && Model.Author.UserId != currentUserId.Value)
+        {
+            <button id="reportStoryBtnDesktop" class="btn btn-danger report-btn">
+                🚩 Zgłoś
+            </button>
+        }
+
+        @if (currentUserId.HasValue && Model.Author != null && Model.Author.UserId == currentUserId.Value)
+        {
+            <div class="edit-story-container">
+                <a asp-action="EditStory" asp-controller="Home" asp-route-StoryId="@Model.StoryId" class="btn btn-primary">
+                    Edytuj relację
+                </a>
+            </div>
+        }
+
+        <span class="story-date">@Model.CreatedAt.ToString("dd-MM-yyyy HH:mm")</span>
+    </div>
+
+    <h1 class="story-details-title">@Model.Title</h1>
+
+    <div class="photo-collage">
+        @if (Model.Images != null && Model.Images.Any())
+        {
+            <div class="photo-grid">
+                @for (int i = 0; i < Math.Min(3, Model.Images.Count); i++)
+                {
+                    <div class="photo">
+                        <img src="@Model.Images.ElementAt(i).ImagePath" alt="Zdjęcie" data-index="@i"/>
+                    </div>
+                }
+
+                @if (Model.Images.Count > 4)
+                {
+                    <div class="photo more-photos">
+                        <img src="@Model.Images.ElementAt(3).ImagePath" alt="Zdjęcie" data-index="3"/>
+                        <div class="overlay">+@(Model.Images.Count - 3)</div>
+                    </div>
+                }
+                else if (Model.Images.Count == 4)
+                {
+                    <div class="photo">
+                        <img src="@Model.Images.ElementAt(3).ImagePath" alt="Zdjęcie" data-index="3"/>
+                    </div>
+                }
+
+                @for (int i = 4; i < Model.Images.Count; i++)
+                {
+                    <img src="@Model.Images.ElementAt(i).ImagePath" alt="Zdjęcie" class="hidden-photo" data-index="@i"/>
+                }
+            </div>
+        }
+        else
+        {
+            <p>Brak zdjęć do wyświetlenia.</p>
+        }
+    </div>
+
+    <div id="lightbox" class="hidden">
+        <button id="lightbox-prev" class="lightbox-arrow">❮</button>
+        <div class="lightbox-content">
+            <button class="lightbox-close" id="lightbox-close">×</button>
+            <img id="lightbox-img" src="" alt="Zdjęcie" />
+        </div>
+        <button id="lightbox-next" class="lightbox-arrow">❯</button>
+    </div>
+
+    <p class="story-details-description mt-4">@Html.Raw(Model.Description.Replace("\n", "<br>"))</p>
+
+    <div class="story-details-container" data-view="story-details">
+        <div class="details-likes-container">
+            <button class="btn-details-like" data-story-id="@Model.StoryId">
+                👍 <span id="likes-count-@Model.StoryId">@Model.Likes</span>
+            </button>
+            <button class="btn-details-dislike" data-story-id="@Model.StoryId">
+                👎 <span id="dislikes-count-@Model.StoryId">@Model.Dislikes</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="story-tags">
+        <strong>Tagi:</strong>
+        @if (Model.Tags != null && Model.Tags.Any())
+        {
+            <ul class="tags-list">
+                @foreach (var tag in Model.Tags)
+                {
+                    <li class="tag-item">
+                        <a asp-action="Stories" asp-route-tag="@tag.Name">@tag.Name</a>
+                    </li>
+                }
+            </ul>
+        }
+        else
+        {
+            <p>Brak tagów do wyświetlenia.</p>
+        }
+    </div>  
+</div>
+
+<div id="reportModal" class="modal hidden">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Zgłoś relację</h2>
+        <form id="reportForm">
+            <input type="hidden" name="StoryId" value="@Model.StoryId" />
+            <label for="reason">Powód zgłoszenia:</label>
+            <textarea id="reason" name="Reason" required></textarea>
+            <div class="modal-buttons">
+                <button type="submit" class="btn btn-primary">Wyślij</button>
+                <button type="button" id="cancelReport" class="btn btn-secondary">Anuluj</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="comments-section">
+    <h3>Komentarze</h3>
+
+    <textarea id="commentText" placeholder="Napisz komentarz..."></textarea>
+    <button id="addCommentBtn" data-story-id="@Model.StoryId">Dodaj komentarz</button>
+
+        <div id="commentList">
+        @foreach (var comment in Model.Comments)
+        {
+            <div class="comment-item" data-comment-id="@comment.CommentId">
+                <div class="comment-header">
+                    <div class="comment-user">
+                        @if (comment.User != null)
+                        {
+                            if (comment.UserId == (int?)ViewData["CurrentUserId"])
+                            {
+                                <a asp-action="Profile" asp-controller="Account" class="comment-user-link d-flex align-items-center">
+                                    <img src="@(comment.User.AvatarPath != null ? "/uploads/" + comment.User.AvatarPath : "/images/default-user-image.jpg")"
+                                        class="comment-avatar" alt="Avatar">
+                                    <strong class="comment-username">@comment.User.Username</strong>
+                                </a>
+                            }
+                            else
+                            {
+                                <a asp-action="UserProfile" asp-controller="Account" asp-route-userId="@comment.UserId" class="comment-user-link d-flex align-items-center">
+                                    <img src="@(comment.User.AvatarPath != null ? "/uploads/" + comment.User.AvatarPath : "/images/default-user-imager.jpg")"
+                                        class="comment-avatar" alt="Avatar">
+                                    <strong class="comment-username">@comment.User.Username</strong>
+                                </a>
+                            }
+                        }
+                        else
+                        {
+                            <span class="deleted-user">[Usunięty użytkownik]</span>
+                        }
+                    </div>
+                    <span class="comment-date">@comment.CreatedAt.ToString("dd-MM-yyyy HH:mm")</span>
+
+                    @if (comment.UserId == (int?)ViewData["CurrentUserId"])
+                    {
+                        <div class="comment-options">
+                            <button class="options-btn">⋮</button>
+                            <div class="delete-option">
+                                <button class="delete-btn" data-comment-id="@comment.CommentId">Usuń</button>
+                            </div>
+                        </div>
+                    }
+                </div>
+                <p>@comment.Content</p>
+            </div>
+        }
+    </div>
+</div>
+
+<script src="~/js/storyCollage.js"></script>
+<script src="~/js/likeStory.js"></script>
+<script src="~/js/reportStory.js"></script>
+<script src="~/js/deleteStoryAdmin.js"></script>
+<script src="~/js/comments.js"></script>
+<script src="~/js/deleteComment.js"></script>
+<link rel="stylesheet" href="~/css/storyCollage.css">
+<link rel="stylesheet" href="~/css/storyDetails.css">
+<link rel="stylesheet" href="~/css/comments.css">

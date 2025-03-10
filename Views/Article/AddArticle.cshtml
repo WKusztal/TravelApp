@@ -1,0 +1,32 @@
+@model TravelApp.Models.Article
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Dodaj artykuł";
+}
+
+<h1>Dodaj poradnik</h1>
+
+<form method="post" asp-action="AddArticle" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="Title">Tytuł</label>
+        <input type="text" class="form-control" id="Title" name="Title" required />
+    </div>
+    <div class="form-group">
+        <label for="Description">Opis</label>
+        <textarea class="form-control" id="Description" name="Description" rows="5" required></textarea>
+    </div>
+    <div class="form-group">
+        <label for="images">Dodaj zdjęcia</label>
+        <label class="custom-file-label">
+            <input type="file" name="images" id="images" class="custom-file-input" multiple />
+        </label>
+    </div>
+    <ul id="selected-files-list"></ul>
+    <div class="d-flex justify-content-between mt-4">
+        <button type="submit" class="btn btn-success">Zapisz poradnik</button>
+        <a asp-action="Articles" class="btn btn-secondary">Anuluj</a>
+    </div>
+</form>
+
+<script src="~/js/uploadImages.js"></script>

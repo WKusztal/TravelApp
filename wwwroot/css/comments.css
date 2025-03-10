@@ -1,0 +1,152 @@
+.comments-section {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+#commentForm {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+#commentText {
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: none;
+}
+
+#commentForm button {
+    margin-top: 10px;
+}
+
+#commentsList {
+    margin-top: 20px;
+}
+
+.comment-item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    position: relative;
+}
+
+.comment-date {
+    font-size: 12px;
+    color: gray;
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    white-space: nowrap; 
+}
+
+.comment-header span {
+    margin-right: 10px; 
+}
+
+.comment-user {
+    display: flex;
+    align-items: center;
+    gap: 12px; 
+}
+
+.comment-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.comment-item strong {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.comment-item span {
+    font-size: 12px;
+    color: gray;
+    text-align: right;
+}
+
+.comment-item p {
+    margin: 5px 0 0;
+    font-size: 14px;
+}
+
+.comment-actions {
+    position: relative;
+    display: inline-block;
+}
+
+.comment-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    background: white;
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 5px;
+    z-index: 10;
+}
+
+.comment-menu.show {
+    display: block;
+}
+
+.comment-menu button {
+    background: none;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    color: red;
+    font-size: 14px;
+    width: 100%;
+    text-align: left;
+}
+
+.comment-menu button:hover {
+    background: #f8d7da;
+}
+
+.delete-option {
+    display: none;
+}
+
+.delete-option.visible {
+    display: block;
+}
+
+.comment-options {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.comment-options .delete-option {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: 80px;
+}
+
+.comment-username {
+    font-size: 16px;
+    font-weight: bold;
+    color: #444;
+    margin-left: 10px;
+}
