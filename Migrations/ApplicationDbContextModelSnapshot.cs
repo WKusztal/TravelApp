@@ -34,7 +34,7 @@ namespace TravelApp.Migrations
 
                     b.HasIndex("TagId");
 
-                    b.ToTable("StoryTag");
+                    b.ToTable("StoryTag", (string)null);
                 });
 
             modelBuilder.Entity("TravelApp.Models.Article", b =>
@@ -62,7 +62,7 @@ namespace TravelApp.Migrations
 
                     b.HasKey("ArticleId");
 
-                    b.ToTable("Articles");
+                    b.ToTable("Articles", (string)null);
                 });
 
             modelBuilder.Entity("TravelApp.Models.ArticleImage", b =>
@@ -84,7 +84,7 @@ namespace TravelApp.Migrations
 
                     b.HasIndex("ArticleId");
 
-                    b.ToTable("ArticleImages");
+                    b.ToTable("ArticleImages", (string)null);
                 });
 
             modelBuilder.Entity("TravelApp.Models.Comment", b =>
@@ -118,7 +118,7 @@ namespace TravelApp.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Comments");
+                    b.ToTable("Comments", (string)null);
                 });
 
             modelBuilder.Entity("TravelApp.Models.Follow", b =>
@@ -141,7 +141,7 @@ namespace TravelApp.Migrations
 
                     b.HasIndex("FollowingId");
 
-                    b.ToTable("Follows");
+                    b.ToTable("Follows", (string)null);
                 });
 
             modelBuilder.Entity("TravelApp.Models.Reaction", b =>
@@ -163,7 +163,7 @@ namespace TravelApp.Migrations
 
                     b.HasKey("ReactionId");
 
-                    b.ToTable("Reactions");
+                    b.ToTable("Reactions", (string)null);
                 });
 
             modelBuilder.Entity("TravelApp.Models.Report", b =>
@@ -193,7 +193,7 @@ namespace TravelApp.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Reports");
+                    b.ToTable("Reports", (string)null);
                 });
 
             modelBuilder.Entity("TravelApp.Models.Story", b =>
@@ -235,7 +235,7 @@ namespace TravelApp.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Stories");
+                    b.ToTable("Stories", (string)null);
                 });
 
             modelBuilder.Entity("TravelApp.Models.StoryImage", b =>
@@ -257,7 +257,7 @@ namespace TravelApp.Migrations
 
                     b.HasIndex("StoryId");
 
-                    b.ToTable("StoryImages");
+                    b.ToTable("StoryImages", (string)null);
                 });
 
             modelBuilder.Entity("TravelApp.Models.Tag", b =>
@@ -274,7 +274,7 @@ namespace TravelApp.Migrations
 
                     b.HasKey("TagId");
 
-                    b.ToTable("Tags");
+                    b.ToTable("Tags", (string)null);
                 });
 
             modelBuilder.Entity("TravelApp.Models.User", b =>
@@ -315,7 +315,7 @@ namespace TravelApp.Migrations
 
                     b.HasKey("UserId");
 
-                    b.ToTable("Users");
+                    b.ToTable("Users", (string)null);
                 });
 
             modelBuilder.Entity("StoryTag", b =>

@@ -26,15 +26,7 @@ namespace TravelApp.Data
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<Follow>()
-                .HasKey(f => f.Id);
-
-            modelBuilder.Entity<Follow>()
-                .Property(f => f.FollowerId)
-                .IsRequired();
-
-            modelBuilder.Entity<Follow>()
-                .Property(f => f.FollowingId)
-                .IsRequired();
+                .HasKey(f => new { f.FollowerId, f.FollowingId });
 
             modelBuilder.Entity<Story>()
                 .HasMany(s => s.Images)
@@ -88,7 +80,7 @@ namespace TravelApp.Data
                 .HasOne(f => f.Following)
                 .WithMany(u => u.Followers)
                 .HasForeignKey(f => f.FollowingId)
-                .OnDelete(DeleteBehavior.NoAction);
+                .OnDelete(DeleteBehavior.Cascade);
         }
 
         public DbSet<Reaction> Reactions { get; set; }

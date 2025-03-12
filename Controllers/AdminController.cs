@@ -62,12 +62,24 @@ namespace TravelApp.Controllers
 
         public IActionResult DeleteUser(int id)
         {
-            var user = _context.Users.Find(id);
-            if (user != null)
+            var user = _context.Users
+                .Include(u => u.Followers)
+                .Include(u => u.Following)
+                .Include(u => u.Reports)
+                .FirstOrDefault(u => u.UserId == id);
+
+            if (user == null)
             {
-                _context.Users.Remove(user);
-                _context.SaveChanges();
+                return NotFound();
             }
+
+            _context.Follows.RemoveRange(user.Followers);
+            _context.Follows.RemoveRange(user.Following);
+            _context.Reports.RemoveRange(user.Reports);
+
+            _context.Users.Remove(user);
+            _context.SaveChanges();
+            
             return RedirectToAction("ManageUsers");
         }
 

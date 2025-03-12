@@ -19,8 +19,8 @@ namespace TravelApp.Models
         public ICollection<Follow> Followers { get; set; } = new List<Follow>();
         public ICollection<Follow> Following { get; set; } = new List<Follow>();
 
-        public ICollection<User> FollowersUsers => Followers.Select(f => f.Follower!).ToList();
-        public ICollection<User> FollowingUsers => Following.Select(f => f.Following!).ToList();
+        public IEnumerable<User> FollowersUsers => Followers.Select(f => f.Follower!).Where(u => u != null);
+        public IEnumerable<User> FollowingUsers => Following.Select(f => f.Following!).Where(u => u != null);
         public ICollection<Report> Reports { get; set; } = new List<Report>();
     }
 }

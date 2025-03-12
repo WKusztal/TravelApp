@@ -278,3 +278,4 @@ C:\Users\disco\Desktop\TravelApp\obj\Debug\net8.0\refint\TravelApp.dll
 C:\Users\disco\Desktop\TravelApp\obj\Debug\net8.0\TravelApp.pdb
 C:\Users\disco\Desktop\TravelApp\obj\Debug\net8.0\TravelApp.genruntimeconfig.cache
 C:\Users\disco\Desktop\TravelApp\obj\Debug\net8.0\ref\TravelApp.dll
+C:\Users\disco\Desktop\TravelApp\obj\Debug\net8.0\TravelApp.sourcelink.json
